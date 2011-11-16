@@ -1,8 +1,8 @@
-Developed by local government to assist with archiving social media streams for public records retention.  Initially developed by the City of Bellingham, WA.
+Developed by local government to assist with archiving social media streams for public records retention.  Initially developed by JoshN at the City of Bellingham, WA.  Now being maintained by JoshN at the Whatcom Transportation Authority.
 
 Current archivers:
 
-Facebook Fan Page:  (http://www.cob.org/data/facebook/)
+Facebook Fan Page:
 This PowerShell script was created as a way to retain a record of all posts and comments published to a Facebook fan page wall.  The data is saved in JSON files which are human readable.  No effort to de-duplicate data is made.  See Facebook-Fan-Page-Feed-Archiver-ReadMe.docx for instructions. 
 
 Twitter:
