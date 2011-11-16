@@ -1,8 +1,8 @@
 ﻿#Twitter Archiving Script
 #
 #   Created by City of Bellingham, WA (http://www.cob.org)
-#   Version .1 (beta)
-#	Last modified 10/6/2010 by Josh Nylander
+#   Version .2 (beta)
+#	Last modified 11/16/2011 by Josh Nylander @ Whatcom Transportation Authority (http://www.ridewta.com)
 #	
 #	This script is designed to harvest all twitter entries a public
 #	account.  This is done by downloading the "feed" of the last 20
@@ -45,7 +45,7 @@ Function Get-XMLviaHTTPGet ([String] $url, [String] $saveas, [Switch] $saveOnly=
 	}
 }
 
-[String] $url = "http://api.twitter.com/1/statuses/user_timeline.xml?screen_name=$screen_name&count=$count";
+[String] $url = "http://api.twitter.com/1/statuses/user_timeline.xml?screen_name=$screen_name&count=$count&include_rts=true&include_entities=true";
 [String] $fileName = $archivepath + '\' + $screen_name + '-' + (Get-Date -Format yyyyMMddHHmm) + '.xml';
 Get-XMLviaHTTPGet $url $fileName -saveOnly;
 Write-Output $fileName;
