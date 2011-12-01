@@ -13,14 +13,13 @@
 #	This code is based on the api found at http://dev.twitter.com/doc/get/statuses/user_timeline
 #	at the revision date listed above.
 #
-#	Output is the list of files saved.
+#	Output is the list of file(s) saved.
 #
-#	Modify the script input values below
+#	Either pass parrameters, named or possitional to the script or change the default values below.
 # 
 #Script inputs
-[String] $archivepath = 'c:\temp';			#path to save the file to
-[String] $screen_name = 'TODO';				#screen_name to retrieve
-[String] $count = '5';						#number of entries to retrieve each time
+#              path to save the file to           screen_name to retrieve            number of entries to retrieve each time
+param([String] $archivepath = 'C:\Users\Public\Documents', [String] $screen_name = 'ridewta', [String] $count = '5')
 
 #-------------------------------------------------------------------------
 Function Get-XMLviaHTTPGet ([String] $url, [String] $saveas, [Switch] $saveOnly=$false)
